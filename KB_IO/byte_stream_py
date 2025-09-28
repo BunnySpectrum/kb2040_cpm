@@ -1,0 +1,14 @@
+
+class ByteStreamPy:
+    def __init__(self):
+        self._stream = print
+        pass
+
+    def configure(self, baudrate: int):
+        del baudrate
+
+    def write(self, data: int):
+        self._stream(data, end='')
+
+    def write_string(self, string: str):
+        self._stream(string, end='')
